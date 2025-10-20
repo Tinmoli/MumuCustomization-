@@ -1,0 +1,86 @@
+# Mumu Customization 配置文件
+# 支持 MiniMessage 格式的颜色和样式
+# 
+# 颜色代码示例:
+# <white>      - 白色
+# <gray>       - 灰色
+# <dark_gray>  - 深灰色
+# <black>      - 黑色
+# <red>        - 红色
+# <dark_red>   - 深红色
+# <gold>       - 金色
+# <yellow>     - 黄色
+# <green>      - 绿色
+# <dark_green> - 深绿色
+# <aqua>       - 青色
+# <dark_aqua>  - 深青色
+# <blue>       - 蓝色
+# <dark_blue>  - 深蓝色
+# <light_purple> - 浅紫色
+# <dark_purple>  - 深紫色
+#
+# 样式代码示例:
+# <bold>       - 粗体
+# <italic>     - 斜体
+# <underline>  - 下划线
+# <strikethrough> - 删除线
+# <obfuscated> - 混淆
+#
+# 渐变色示例:
+# <gradient:red:blue>文本</gradient>
+# <gradient:#ff0000:#0000ff>文本</gradient>
+#
+# 彩虹色示例:
+# <rainbow>文本</rainbow>
+#
+# 占位符:
+# %player% - 玩家名称
+#
+# 消息优先级:
+# 1. 单独玩家消息 (最高优先级)
+# 2. OP管理员消息
+# 3. 默认消息
+
+messages:
+  # 默认玩家进入服务器的消息
+  join: "<green><bold>➤</bold> <yellow>%player%</yellow> <green>加入了服务器</green>"
+  
+  # 默认玩家退出服务器的消息
+  quit: "<red><bold>➤</bold> <yellow>%player%</yellow> <red>离开了服务器</red>"
+  
+  # OP管理员的进入退出消息
+  op:
+    join: "<gold><bold>★</bold></gold> <gradient:yellow:gold>管理员 %player%</gradient> <gold>上线了!</gold> <gold><bold>★</bold></gold>"
+    quit: "<gold><bold>★</bold></gold> <gradient:yellow:gold>管理员 %player%</gradient> <gold>下线了!</gold> <gold><bold>★</bold></gold>"
+  
+  # 单独玩家的自定义消息（优先级最高）
+  # 格式: 玩家名称: { join: "进入消息", quit: "退出消息" }
+  players:
+    # 示例：为玩家 "Notch" 设置特殊消息
+    # Notch:
+    #   join: "<light_purple><bold>⭐</bold></light_purple> <rainbow><bold>创始人 %player%</bold></rainbow> <light_purple>降临服务器!</light_purple>"
+    #   quit: "<light_purple><bold>⭐</bold></light_purple> <rainbow><bold>创始人 %player%</bold></rainbow> <light_purple>离开了服务器!</light_purple>"
+    
+    # 示例：为玩家 "Steve" 设置特殊消息
+    # Steve:
+    #   join: "<aqua>%player% 回来了!</aqua>"
+    #   quit: "<aqua>%player% 走了!</aqua>"
+
+# 更多消息示例 (取消注释即可使用):
+
+# 简单样式:
+# join: "<green>+ %player%"
+# quit: "<red>- %player%"
+
+# 渐变色样式:
+# join: "<gradient:green:aqua>%player% 加入了游戏!</gradient>"
+# quit: "<gradient:red:dark_red>%player% 离开了游戏!</gradient>"
+
+# 彩虹样式:
+# join: "<rainbow>%player% 加入了服务器!</rainbow>"
+# quit: "<rainbow>%player% 离开了服务器!</rainbow>"
+
+# 复杂样式:
+# join: "<gold><bold>★</bold></gold> <gradient:yellow:gold>玩家 %player% 来啦!</gradient> <gold><bold>★</bold></gold>"
+# quit: "<dark_gray><bold>●</bold></dark_gray> <gray>玩家 %player% 走了~</gray> <dark_gray><bold>●</bold></dark_gray>"
+

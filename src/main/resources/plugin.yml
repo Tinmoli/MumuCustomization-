@@ -1,0 +1,22 @@
+name: MumuCustomization
+version: '${project.version}'
+main: com.example.playermessages.PlayerJoinQuitMessages
+api-version: '1.21'
+author: Mumu
+description: Mumu customization - 自定义玩家进入退出服务器消息插件
+
+commands:
+  pjqm:
+    description: 重载插件配置
+    usage: /pjqm reload
+    permission: mumucustomization.reload
+    aliases: [playermessages, mumu]
+
+permissions:
+  mumucustomization.reload:
+    description: 允许重载插件配置
+    default: op
+  playermessages.reload:
+    description: 允许重载插件配置（别名）
+    default: op
+
